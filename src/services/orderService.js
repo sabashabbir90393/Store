@@ -1,7 +1,7 @@
 import axios from "axios";
 import { getToken } from "./authService";
 
-const API_URL = "http://localhost:5050/orders";
+const API_URL = "https://store-backened.vercel.app/orders";
 
 export const createOrder = async ({
   items,

@@ -4,6 +4,7 @@ import {
   Route,
   Navigate,
   Outlet,
+  useLocation,
 } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
@@ -21,12 +22,13 @@ import Orders from "./pages/Orders";
 import Profile from "./pages/Profile";
 
 import { isLoggedIn } from "./services/authService";
+import Footer from "./components/Footer";
 
 
 // =========================
 // STORE LAYOUT
 // =========================
-function StoreLayout() {
+/* function StoreLayout() {
   const loggedIn = isLoggedIn();
 
   if (!loggedIn) {
@@ -39,6 +41,29 @@ function StoreLayout() {
       <Outlet />
     </>
   );
+} */
+function StoreLayout() {
+  const loggedIn = isLoggedIn();
+  const location = useLocation();
+  if (!loggedIn) {
+    return <Navigate to="/" replace />;
+  }
+const hideFooter = location.pathname === "/store/profile";
+ /*  return (
+    <>
+      <Navbar />
+      <Outlet />
+      <Footer />
+    </>
+  ); */
+  return (
+  <>
+    <Navbar />
+    <Outlet />
+    {!hideFooter && <Footer />}
+  
+  </>
+);
 }
 
 

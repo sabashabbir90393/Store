@@ -1,10 +1,8 @@
 import {
-  Facebook,
-  Instagram,
+  
   Mail,
   MapPin,
   Phone,
-  Twitter,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -28,32 +26,31 @@ function Footer() {
               Discover products you'll love, shop with confidence,
               and enjoy a simple shopping experience built for you.
             </p>
+<div className="mt-6 flex items-center gap-3">
+  <a
+    href="#"
+    aria-label="Facebook"
+    className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-sm font-bold transition hover:border-[#C9A227] hover:bg-[#C9A227] hover:text-[#0F3D35]"
+  >
+    f
+  </a>
 
-            <div className="mt-6 flex items-center gap-3">
-              <a
-                href="#"
-                aria-label="Facebook"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 transition hover:border-[#C9A227] hover:bg-[#C9A227] hover:text-[#0F3D35]"
-              >
-                <Facebook size={17} />
-              </a>
+  <a
+    href="#"
+    aria-label="Instagram"
+    className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-sm font-bold transition hover:border-[#C9A227] hover:bg-[#C9A227] hover:text-[#0F3D35]"
+  >
+    ◎
+  </a>
 
-              <a
-                href="#"
-                aria-label="Instagram"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 transition hover:border-[#C9A227] hover:bg-[#C9A227] hover:text-[#0F3D35]"
-              >
-                <Instagram size={17} />
-              </a>
-
-              <a
-                href="#"
-                aria-label="Twitter"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 transition hover:border-[#C9A227] hover:bg-[#C9A227] hover:text-[#0F3D35]"
-              >
-                <Twitter size={17} />
-              </a>
-            </div>
+  <a
+    href="#"
+    aria-label="Twitter"
+    className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-sm font-bold transition hover:border-[#C9A227] hover:bg-[#C9A227] hover:text-[#0F3D35]"
+  >
+    𝕏
+  </a>
+</div>
           </div>
 
           <div>
@@ -147,9 +144,7 @@ function Footer() {
               © {new Date().getFullYear()} SHOPHIVE. All rights reserved.
             </p>
 
-            <p>
-              Click • Buy • Enjoy
-            </p>
+            <p>Click • Buy • Enjoy</p>
           </div>
         </div>
       </div>
